@@ -71,15 +71,15 @@
 
 <nav class="nav"><div class="nav-inner"><button data-view="home" onclick="showView('home')"><span class="ico">🏠</span>Accueil</button><button data-view="workout" onclick="showView('workout')"><span class="ico">🏋️</span>Séance</button><button data-view="progression" onclick="showView('progression')"><span class="ico">📈</span>Progression</button><button data-view="history" onclick="showView('history')"><span class="ico">🗂️</span>Historique</button></div></nav>
 <script>
-const APP_VERSION = '2.4.0';
+const APP_VERSION = '2.5.0';
 document.title = `Muscu 6 semaines · v${APP_VERSION}`;
 const PROGRAM={
  A:{name:'Séance A',subtitle:'Quadriceps · Pecs · Dos',exercises:[
-  ['Presse à cuisses','3×6–10','2→1','2 min 30–3 min'],['Développé incliné haltères','3×6–10','2→1','2 min 30'],['Tirage vertical','3×8–12','2→1','2 min'],['Leg extension','2×10–15','1–2','75–90 s'],['Élévations latérales','3×12–20','1–2','60–75 s'],['Curl biceps','2×8–12','1–2','75–90 s'],['Crunch poulie','2×10–15','1–2','60–75 s']]},
- B:{name:'Séance B',subtitle:'Ischios · Dos · Épaules',exercises:[
-  ['Soulevé de terre roumain','3×6–10','2→1','2 min 30–3 min'],['Tirage horizontal','3×8–12','2→1','2 min'],['Développé épaules','3×6–10','2→1','2 min'],['Leg curl','3×10–15','1–2','90 s'],['Oiseaux','2×12–20','1–2','60–75 s'],['Extension triceps','2×10–15','1–2','60–90 s'],['Dead bug','2×8–12/côté','1–2','60–90 s']]},
- C:{name:'Séance C',subtitle:'Full body · Esthétique',exercises:[
-  ['Presse à cuisses','3×8–12','2→1','2 min 30'],['Développé couché','3×6–10','2→1','2 min 30'],['Tirage vertical/horizontal','3×8–12','2→1','2 min'],['Bulgarian split squat','2×8–12/jambe','2→1','90–120 s'],['Élévations latérales','3×12–20','1–2','60–75 s'],['Curl biceps','2×10–15','1–2','60–90 s'],['Extension triceps','2×10–15','1–2','60–90 s'],['Crunch poulie','2×10–15','1–2','60–75 s']]}
+  ['Presse à cuisses','3×6–10','2→1','2 min 30–3 min'],['Développé incliné haltères','4×6–10','2→1','2 min 30–3 min'],['Tirage vertical','3×8–12','2→1','2 min'],['Leg extension','2×10–15','1–2','75–90 s'],['Élévations latérales','3×12–20','1–2','60–75 s'],['Curl biceps','2×8–12','1–2','75–90 s'],['Crunch poulie','2×10–15','1–2','60–75 s']]},
+ B:{name:'Séance B',subtitle:'Ischios · Pecs · Dos',exercises:[
+  ['Soulevé de terre roumain','3×6–10','2→1','2 min 30–3 min'],['Développé couché','3×6–10','2→1','2 min 30–3 min'],['Tirage horizontal','3×8–12','2→1','2 min'],['Écartés poulie ou machine','2×10–15','1–2','60–90 s'],['Leg curl','3×10–15','1–2','90 s'],['Développé épaules','2×6–10','2→1','2 min'],['Extension triceps','2×10–15','1–2','60–90 s'],['Dead bug','2×8–12/côté','1–2','60–90 s']]},
+ C:{name:'Séance C',subtitle:'Full body · Priorité pecs',exercises:[
+  ['Presse à cuisses','3×8–12','2→1','2 min 30'],['Développé incliné haltères','3×8–12','2→1','2 min 30'],['Tirage vertical/horizontal','3×8–12','2→1','2 min'],['Écartés poulie ou machine','2×12–15','1–2','60–90 s'],['Bulgarian split squat','2×8–12/jambe','2→1','90–120 s'],['Élévations latérales','3×12–20','1–2','60–75 s'],['Curl biceps','2×10–15','1–2','60–90 s'],['Extension triceps','2×10–15','1–2','60–90 s'],['Crunch poulie','2×10–15','1–2','60–75 s']]}
 };
 const KEY='muscu6v1';
 let state=JSON.parse(localStorage.getItem(KEY)||'null')||{week:1,session:'A',logs:[],drafts:{},metrics:{weight:'',calories:'2300',steps:'10000',protein:''}};
